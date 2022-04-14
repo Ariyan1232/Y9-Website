@@ -5,6 +5,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <title>NavBar Example</title>
         <style>
+            #footer{
+                background-color: #E4E8DD;
+            }
+
             #navbar
             {
                 background-color: #E4E8DD;
@@ -138,6 +142,23 @@
         </div>
         <div id="message"></div>
 
+        <h1>Which of the following are fossil fuels?</h1>
+        <div>
+            <input name="button1" type="checkbox" id="21" onclick="showAnswer2();">
+            <label or="2">Coal</label>
+            <input name="button1" type="checkbox" id="31" onclick="showAnswer2();">
+            <label or="3">Water</label>
+            <input name="button1" type="checkbox" id="41" onclick="showAnswer2();">
+            <label or="4">Oil</label>
+            <input name="button1" type="checkbox" id="51" onclick="showAnswer2();">
+            <label or="5">Gas</label>
+        </div>
+        <div id="message2"></div>
+
+        <div id="footer">
+            <img src="wheel.webp" alt="goals" style="width: 300px ; height: 300px">
+        </div>
+
         <script type="text/javascript">
 
             function showAnswer()
@@ -161,6 +182,17 @@
                 }
                 else {
                     document.getElementById("message").innerHTML = "Wrong"
+                }
+            }
+            console.log()
+            function showAnswer3()
+            {
+                if (document.getElementById("21").checked == true && document.getElementById("41").checked && document.getElementById("51").checked)
+                {
+                    document.getElementById("message2").innerHTML = "You are correct!"
+                }
+                else {
+                    document.getElementById("message2").innerHTML = "You are wrong."
                 }
             }
         
